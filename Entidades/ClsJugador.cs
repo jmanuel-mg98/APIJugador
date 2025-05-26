@@ -22,6 +22,7 @@
         public int Puntuacion
         {
             get { return puntuacion; }
+            set {  puntuacion = value; }
         }
         #endregion
         #region constructores
@@ -41,13 +42,6 @@
             this.puntuacion = puntuacion;
         }
         #endregion
-        /// <summary>
-        /// Método interno que permite establecer la puntuación desde el DAL u otras capas autorizadas
-        /// </summary>
-        /// <param name="valor"></param>
-        public void SetPuntuacion(int valor)
-        {
-            this.puntuacion = valor;
-        }
+       
     }
 }

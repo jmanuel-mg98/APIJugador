@@ -37,7 +37,7 @@ namespace Dal
                     if (miLector["nombre"] != DBNull.Value)
                         nuevoJugador.Nombre = (string)miLector["nombre"];
                     if (miLector["puntuacion"] != DBNull.Value)
-                        nuevoJugador.SetPuntuacion((int)miLector["puntuacion"]);
+                        nuevoJugador.Puntuacion=((int)miLector["puntuacion"]);
 
                     ListadoCompletoJugadorDAl.Add(nuevoJugador);
                 }

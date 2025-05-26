@@ -26,18 +26,18 @@ namespace Dal
             try
             {
                 miConexion = ClsConexionBD.abrirConexion();
-                miComando.CommandText = "SELECT * FROM ClsCaballo";
+                miComando.CommandText = "SELECT * FROM Jugador";
                 miComando.Connection = miConexion;
 
                 miLector = miComando.ExecuteReader();
 
                 while (miLector.Read())
                 {
-                    ClsJugador nuevoJugador = new ClsJugador((int)miLector["id"]);
-                    if (miLector["nombre"] != DBNull.Value)
-                        nuevoJugador.Nombre = (string)miLector["nombre"];
-                    if (miLector["puntuacion"] != DBNull.Value)
-                        nuevoJugador.Puntuacion=((int)miLector["puntuacion"]);
+                    ClsJugador nuevoJugador = new ClsJugador((int)miLector["idJugador"]);
+                    if (miLector["nombreJugador"] != DBNull.Value)
+                        nuevoJugador.Nombre = (string)miLector["nombreJugador"];
+                    if (miLector["puntuacionJugador"] != DBNull.Value)
+                        nuevoJugador.Puntuacion=((int)miLector["puntuacionJugador"]);
 
                     ListadoCompletoJugadorDAl.Add(nuevoJugador);
                 }

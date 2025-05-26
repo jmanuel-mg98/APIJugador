@@ -17,7 +17,7 @@ namespace Dal
             try
             {
                 miConexion.ConnectionString =
-                                        "server=jmanuel-98.database.windows.net;database=jmanuel-98;uid=usuario;pwd=LaCampana123;trustServerCertificate=true;";
+                                        "server=alvaro-salvador.database.windows.net;database=alvaroDB;uid=usuario;pwd=LaCampana123;trustServerCertificate=true;";
                 miConexion.Open();
             }
             catch (Exception ex)

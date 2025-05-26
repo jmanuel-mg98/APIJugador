@@ -24,7 +24,7 @@ namespace Dal
             try
             {
                 miConexion = ClsConexionBD.abrirConexion();
-                miComando.CommandText = "INSERT INTO ClsJugador (nombre, puntuacion) VALUES ( @nombre, @puntuacion)";
+                miComando.CommandText = "INSERT INTO Jugador (nombreJugador, puntuacionJugador) VALUES ( @nombre, @puntuacion)";
                 miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = jugador.Nombre;
                 miComando.Parameters.Add("@puntuacion", System.Data.SqlDbType.Int).Value = jugador.Puntuacion;
 

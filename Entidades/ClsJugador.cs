@@ -1,4 +1,6 @@
-﻿namespace Entidades
+﻿using System.Text.Json.Serialization;
+
+namespace Entidades
 {
     public class ClsJugador
     {
@@ -12,13 +14,13 @@
         {
             get { return id; }
         }
-
+        [JsonPropertyName("nombreJugador")]
         public string Nombre
         {
             get { return nombre; }
             set { nombre = value; }
         }
-
+        [JsonPropertyName("puntuacionJugador")]
         public int Puntuacion
         {
             get { return puntuacion; }

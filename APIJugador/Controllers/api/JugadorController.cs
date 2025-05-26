@@ -53,7 +53,7 @@ namespace APIJugador.Controllers.api
                 }
                 else
                 {
-                    salida = Ok("jugador insertado correctamente.");
+                    salida = Ok(filasAfectadas);
                 }
             }
             catch (Exception ex)
